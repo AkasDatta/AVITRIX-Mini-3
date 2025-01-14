@@ -16,8 +16,11 @@
       href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
     >
 
-    <!-- Testimonial CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+    <!-- Add Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+
 </head>
 <body>
     
@@ -261,33 +264,44 @@
             <h2 class="font-semibold text-3xl font-semibold md:text-5xl lg:text-6xl"><span class="bg-gradient-to-r from-[#A9D7FF] to-[#1F1C7B] bg-clip-text text-transparent">Maximum Impact</span>, Minimum Effort</h2>
             <p class="text-xl md:text-2xl lg:text-3xl pt-4">Get advanced shots in seconds with just a <br> tap with QuickShots</p>
         </div>
-        <div class="relative overflow-hidden w-[80%] mx-auto cursor-pointer">
-            <div
-              id="videoCarousel"
-              class="flex gap-5 transition-transform duration-700"
-              style="transform: translateX(-50%);" <!-- Initial position to center the middle two videos -->
-            >
-              <div class="shrink-0 w-[25%]">
-                <video src="./img/Videos/Clouds.mp4" class="rounded-lg" autoplay muted loop></video>
-              </div>
-              <div class="shrink-0 w-[25%]">
-                <video src="./img/Videos/River.mp4" class="rounded-lg" autoplay muted loop></video>
-              </div>
-              <div class="shrink-0 w-[25%]">
-                <video src="./img/Videos/Waterfall.mp4" class="rounded-lg" autoplay muted loop></video>
-              </div>
-              <div class="shrink-0 w-[25%]">
-                <video src="./img/Videos/Clouds.mp4" class="rounded-lg" autoplay muted loop></video>
-              </div>
-            </div>
-          </div>
+        <div class="owl-carousel owl-theme">
+            <div><video src="./img/Videos/Clouds.mp4" class="rounded-2xl" autoplay muted loop></video></div>
+            <div><video src="./img/Videos/River.mp4" class="rounded-2xl" autoplay muted loop></video></div>
+            <div><video src="./img/Videos/Waterfall.mp4" class="rounded-2xl" autoplay muted loop></video></div>
+            <div><video src="./img/Videos/Clouds.mp4" class="rounded-2xl" autoplay muted loop></video></div>
+        </div>
           
-          
-          
-          
-    </div>
+    </div>  
   
-  <!-- js file here  -->
-   <script src="./js/script.js"></script>
+    <!-- js file here  -->
+    <script src="./js/script.js"></script>
+
+    <!-- Add jQuery (required for Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Add Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+   <script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:12,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:4
+                }
+            }
+        });
+    });
+  </script>
 </body>
 </html>
