@@ -22,11 +22,11 @@
 <body>
     
     <!-- Navbar -->
-    <nav class="border-gray-200 bg-[#5E5E5E]">
+    <nav class="border-gray-200 bg-[#5E5E5E] fixed top-0 w-full z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white hover:duration-100 hover:text-gray-100">
-                AVITRIX Mini 3
+                    AVITRIX Mini 3
                 </span>
             </a>
             <!-- Toggle Button -->
@@ -44,56 +44,71 @@
             <div
                 class="w-full hidden md:block md:w-auto"
                 id="navbar-default"
-                >
+            >
                 <ul
                     class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-[#5E5E5E]"
                 >
                     <li>
-                    <a
-                        href="#"
-                        class="block py-2 px-3 bg-[#5E5E5E] rounded text-white hover:duration-100 hover:text-gray-100"
-                        aria-current="page"
-                    >
-                        Customise
-                    </a>
+                        <a
+                            href="#"
+                            class="block py-2 px-3 bg-[#5E5E5E] rounded text-white hover:duration-100 hover:text-gray-100"
+                            aria-current="page"
+                        >
+                            Customise
+                        </a>
                     </li>
                     <li>
-                    <a
-                        href="#"
-                        class="block py-2 px-3 text-white hover:duration-100 hover:text-gray-100 rounded bg-[#5E5E5E]"
-                    >
-                        Videos
-                    </a>
+                        <a
+                            href="#"
+                            class="block py-2 px-3 text-white hover:duration-100 hover:text-gray-100 rounded bg-[#5E5E5E]"
+                        >
+                            Videos
+                        </a>
                     </li>
                     <li>
-                    <a
-                        href="#"
-                        class="block py-2 px-3 text-white hover:duration-100 hover:text-gray-100 rounded bg-[#5E5E5E]"
-                    >
-                        Downloads
-                    </a>
+                        <a
+                            href="#"
+                            class="block py-2 px-3 text-white hover:duration-100 hover:text-gray-100 rounded bg-[#5E5E5E]"
+                        >
+                            Downloads
+                        </a>
                     </li>
                     <li>
-                    <a
-                        href="#"
-                        class="block py-2 px-3 text-white hover:duration-100 hover:text-gray-100 rounded bg-[#5E5E5E]"
-                    >
-                        FAQ
-                    </a>
+                        <a
+                            href="#"
+                            class="block py-2 px-3 text-white hover:duration-100 hover:text-gray-100 rounded bg-[#5E5E5E]"
+                        >
+                            FAQ
+                        </a>
                     </li>
                     <li>
-                    <button
-                        class="block py-0.5 px-5 text-white bg-[#209DFF] hover:duration-100 hover:text-gray-100 rounded-xl"
-                    >
-                        Pre Order
-                    </button>
+                        <button
+                            class="block py-0.5 px-5 text-white bg-[#209DFF] hover:duration-100 hover:text-gray-100 rounded-xl"
+                        >
+                            Pre Order
+                        </button>
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
-  
+    
+    <!-- Banner -->
+    <div class="bg-container bg-[#F9F7F7] pt-20">
+        <div class="dark-overlay">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-8 px-12 xl:px-36">
+                <div>
+                    <div class="mt-20 lg:mt-36 md:mt-36 text-4xl xl:text-7xl lg:text-7xl md:text-7xl text-white">
+                        <p class="pl-2">Next-Gen</p>
+                        <p class="text-6xl lg:text-9xl font-bold pb-2">QR Code</p> 
+                        <p class="pl-2">Generator</p>
+                    </div>
+                    <h1 class="text-white my-6 pl-2">Design <b>beautiful</b> QR codes, stand out from the crowd. Create <b>dynamic QR codes</b> to get scan statistics and insights.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
   
   <!-- js file here  -->
    <script src="./js/script.js"></script>
