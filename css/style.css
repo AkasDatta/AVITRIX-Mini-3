@@ -33,7 +33,7 @@ html{
     position: relative;
     background-size: cover;
     background-position: center;
-    height: 1200px;
+    height: 1500px;
     background-image: url(../img/Images/DroneFlyingDownRoad.jpeg);
 
     @media (max-height: 600px) {
@@ -42,5 +42,5 @@ html{
 }
 .drone-container   .dark-overlay{
     background: rgba(0, 0, 0, 0.512);
-    min-height: 1200px;
+    min-height: 1500px;
 }
