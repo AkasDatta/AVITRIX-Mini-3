@@ -14,3 +14,16 @@ html{
         height: 600px;
     }
 }
+
+/* Product information  */
+.product-container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    background-image: url(../img/Images/productinformation.png);
+
+    @media (max-height: 600px) {
+        height: 600px;
+    }
+}
