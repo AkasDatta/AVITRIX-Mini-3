@@ -27,3 +27,16 @@ html{
         height: 600px;
     }
 }
+
+/* Drone scrolling  */
+.drone-container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    background-image: url(../img/Images/DroneFlyingDownRoad.jpeg);
+
+    @media (max-height: 600px) {
+        height: 900px;
+    }
+}
