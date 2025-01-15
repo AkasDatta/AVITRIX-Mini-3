@@ -93,15 +93,18 @@
 
     <!-- Order Banner  -->
     <div class="pt-48 px-12 xl:px-28 bg-white text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 items-stretch">
-        <div class="flex items-center justify-center">
-          <img src="./img/Images/StoreMain.png" alt="">
-          <img src="./img/Images/Property 1=Frame 19.png" alt="">
-          <img src="./img/Images/Property 1=Frame 20.png" alt="">
-          <img src="./img/Images/Property 1=Frame 21.png" alt="">
-          <img src="./img/Images/Property 1=Frame 22.png" alt="">
-          <img src="./img/Images/Property 1=Frame 23.png" alt="">
-          <img src="./img/Images/Property 1=Frame 24.png" alt="">
-        </div>
+        <div class="flex items-center justify-center overflow-hidden">
+            <div id="carousel" class="relative w-full">
+              <img class="carousel-image hidden" src="./img/Images/StoreMain.png" alt="Image 1">
+              <img class="carousel-image hidden" src="./img/Images/Property 1=Frame 19.png" alt="Image 2">
+              <img class="carousel-image hidden" src="./img/Images/Property 1=Frame 20.png" alt="Image 3">
+              <img class="carousel-image hidden" src="./img/Images/Property 1=Frame 21.png" alt="Image 4">
+              <img class="carousel-image hidden" src="./img/Images/Property 1=Frame 22.png" alt="Image 5">
+              <img class="carousel-image hidden" src="./img/Images/Property 1=Frame 23.png" alt="Image 6">
+              <img class="carousel-image hidden" src="./img/Images/Property 1=Frame 24.png" alt="Image 7">
+            </div>
+          </div>          
+          
         <div class="flex flex-col justify-between">
           <div class="pb-12">
             <h2 class="text-3xl md:text-6xl lg:text-6xl font-semibold">AVX MINI 3</h2>
@@ -260,5 +263,31 @@
 
     <!-- js file here  -->
    <script src="./js/script.js"></script>
+
+   <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll(".carousel-image");
+            let currentIndex = 0;
+
+            // Show the first image
+            images[currentIndex].classList.remove("hidden");
+            images[currentIndex].classList.add("block");
+
+            // Add click event listener to the carousel container
+            const carousel = document.getElementById("carousel");
+            carousel.addEventListener("click", () => {
+                // Hide the current image
+                images[currentIndex].classList.add("hidden");
+                images[currentIndex].classList.remove("block");
+
+                // Increment the index (loop back to 0 if at the end)
+                currentIndex = (currentIndex + 1) % images.length;
+
+                // Show the next image
+                images[currentIndex].classList.remove("hidden");
+                images[currentIndex].classList.add("block");
+            });
+        });
+   </script>
 </body>
 </html>
