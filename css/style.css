@@ -42,6 +42,7 @@
 }
 
 
+/*-------------- color drone section --------- */
 /* Scrollable container */
 .snap-container {
     scroll-snap-type: y mandatory; /* Enable vertical snapping */
