@@ -41,3 +41,37 @@
     min-height: 1500px;
 }
 
+
+/* Scrollable container */
+.snap-container {
+    scroll-snap-type: y mandatory; /* Enable vertical snapping */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    height: 100vh; /* Full viewport height */
+
+    /* Hide scrollbar for Webkit browsers (e.g., Chrome, Safari) */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.snap-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+}
+
+/* Each scrollable section */
+.snap-item {
+    scroll-snap-align: start; /* Snap to the start of each section */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Optional smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
